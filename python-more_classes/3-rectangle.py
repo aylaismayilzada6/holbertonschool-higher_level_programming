@@ -6,10 +6,11 @@ class Rectangle:
     """Class that defines a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a rectangle with optional width and height."""
+        """Initialize rectangle with width and height."""
         self.width = width
         self.height = height
 
+    # ----- WIDTH -----
     @property
     def width(self):
         """Retrieve the width."""
@@ -24,6 +25,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    # ----- HEIGHT -----
     @property
     def height(self):
         """Retrieve the height."""
@@ -37,3 +39,27 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    # ----- AREA -----
+    def area(self):
+        """Return the area of the rectangle."""
+        return self.__width * self.__height
+
+    # ----- PERIMETER -----
+    def perimeter(self):
+        """Return the perimeter of the rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
+
+    # ----- STRING REPRESENTATION -----
+    def __str__(self):
+        """Return the rectangle using # characters."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        rows = []
+        for _ in range(self.__height):
+            rows.append("#" * self.__width)
+
+        return "\n".join(rows)
