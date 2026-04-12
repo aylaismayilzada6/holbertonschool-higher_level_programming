@@ -29,3 +29,7 @@
 # Ensure original list is unchanged
 >>> my_list3
 [3, 1, 2, 1]
+
+>>> my_list4 = MyList()
+>>> my_list4.print_sorted()
+[]
