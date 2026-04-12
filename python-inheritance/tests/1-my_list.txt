@@ -6,30 +6,19 @@
 >>> my_list.append(2)
 >>> my_list.append(3)
 >>> my_list.append(5)
-
 >>> print(my_list)
 [1, 4, 2, 3, 5]
-
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
-
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
-# Test with already sorted list
->>> my_list2 = MyList([1, 2, 3, 4])
+>>> my_list2 = MyList([3, -1, 2, 0])
 >>> my_list2.print_sorted()
-[1, 2, 3, 4]
+[-1, 0, 2, 3]
+>>> print(my_list2)
+[3, -1, 2, 0]
 
-# Test with duplicates
->>> my_list3 = MyList([3, 1, 2, 1])
+>>> my_list3 = MyList()
 >>> my_list3.print_sorted()
-[1, 1, 2, 3]
-
-# Ensure original list is unchanged
->>> my_list3
-[3, 1, 2, 1]
-
->>> my_list4 = MyList()
->>> my_list4.print_sorted()
 []
