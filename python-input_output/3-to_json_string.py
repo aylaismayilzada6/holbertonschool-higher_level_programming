@@ -25,4 +25,3 @@ def to_json_string(my_obj):
         '{"a": 1, "b": 2}'
     """
     return json.dumps(my_obj)
-
