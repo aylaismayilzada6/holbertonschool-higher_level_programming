@@ -1,18 +1,16 @@
 #!/usr/bin/python3
-"""
-Module that contains a function that returns the dictionary
-description of an object for JSON serialization.
-"""
+"""Module that defines a Student class"""
 
 
-def class_to_json(obj):
-    """
-    Returns the dictionary description of an object.
+class Student:
+    """Defines a student"""
 
-    Args:
-        obj: An instance of a class
+    def __init__(self, first_name, last_name, age):
+        """Initializes a Student instance"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-    Returns:
-        dict: Dictionary representation of the object
-    """
-    return obj.__dict__
+    def to_json(self):
+        """Returns a dictionary representation of a Student instance"""
+        return self.__dict__
