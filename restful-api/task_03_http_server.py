@@ -42,6 +42,7 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
+            # Ensure this exact string is sent
             self.wfile.write(b"404 Not Found")
 
 def run_server():
